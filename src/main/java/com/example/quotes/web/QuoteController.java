@@ -111,7 +111,7 @@ public class QuoteController {
         }
     }     
 
-    @PutMapping("/quotes/{id}")
+   /*  @PutMapping("/quotes/{id}")
     public ResponseEntity<Quote> updateQuote(@PathVariable("id") Long id, @RequestBody Quote quote) {
         try {
             Optional<Quote> existingQuote = quoteService.findById(id);
@@ -130,8 +130,18 @@ public class QuoteController {
             System.out.println(e.getMessage());
             return new ResponseEntity<Quote>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-    }     
+    }  */    
+    @PutMapping("/quotes/{id}")
+    public ResponseEntity<Quote> updateQuote(@PathVariable("id") Long id, @RequestBody Quote quote) {
 
+            Optional<Quote> existingQuote = quoteService.findById(id);
+                Quote updatedQuote = existingQuote.get();
+                updatedQuote.setAuthor(quote.getAuthor());
+                updatedQuote.setQuote(quote.getQuote());
+                quoteService.updateQuote(updatedQuote);
+
+                return new ResponseEntity<Quote>(updatedQuote, HttpStatus.OK);
+    }   
     @DeleteMapping("/quotes/{id}")
     public ResponseEntity<HttpStatus> deleteQuote(@PathVariable("id") Long id) {
         try {

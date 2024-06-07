@@ -1,0 +1,10 @@
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/web/HelloController.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/QuoteService.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/config/WebMvcConfig.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/web/QuoteController.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/HealthCheck.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/QuoteRepository.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/CustomData.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/Quote.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/QuotesApplication.java
+/Users/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/StartupCheck.java
