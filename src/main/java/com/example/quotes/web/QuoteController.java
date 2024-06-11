@@ -110,7 +110,11 @@ public class QuoteController {
             return new ResponseEntity<Quote>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }     
-
+   /*  @GetMapping("/quotes/random-quote")
+    public Quote randomQuote2()
+    {
+        return quoteService.findRandomQuote();
+    }  */
    /*  @PutMapping("/quotes/{id}")
     public ResponseEntity<Quote> updateQuote(@PathVariable("id") Long id, @RequestBody Quote quote) {
         try {
