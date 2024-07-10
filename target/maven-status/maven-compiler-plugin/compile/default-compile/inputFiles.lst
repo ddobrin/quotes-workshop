@@ -1,11 +1,11 @@
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/config/WebMvcConfig.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/web/QuoteController.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/Quote.java
+/usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/GenerateQuote.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/CustomData.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/QuotesApplication.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/StartupCheck.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/QuoteRepository.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/web/HelloController.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/QuoteService.java
-/usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/domain/QuotesTestApplication.java
 /usr/local/google/home/daniellan/quotes-workshop/src/main/java/com/example/quotes/actuator/HealthCheck.java
