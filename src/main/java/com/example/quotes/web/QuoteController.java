@@ -67,7 +67,13 @@ public class QuoteController {
     {
         return quoteService.findRandomQuote();
     }
-
+    
+    /* @GetMapping("/quotes/random-quote2")
+    public Quote randomQuote2()
+    {
+    return quoteService.randomQuote2();
+    }
+ */
     @GetMapping("/quotes") 
     public ResponseEntity<List<Quote>> allQuotes()
     {

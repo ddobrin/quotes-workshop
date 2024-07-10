@@ -25,6 +25,7 @@ steps:
 - id: 'build-project'
 # TODO: Finish the build-project step
  
+# below: solution
  # name: maven:3.9.5-eclipse-temurin-21
   # entrypoint: mvn
   # volumes:

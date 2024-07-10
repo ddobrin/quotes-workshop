@@ -31,7 +31,7 @@ public class GenerateQuote {
 	}
 
 
-	public static void randomQuote2() {}
+	public static void findRandomQuote() {}
 	@Bean
 	ApplicationRunner applicationRunner(
 			VertexAiGeminiChatModel geminiChatModel) {
@@ -63,7 +63,7 @@ public class GenerateQuote {
 		String prompt = String.format("You are an experienced literary critic. Please extract a famous quote from the book %s", book);
 
 			long start = System.currentTimeMillis();
-			System.out.println("VERTEX_AI_GEMINI: " + geminiChatModel
+			return ("VERTEX_AI_GEMINI: " + geminiChatModel
 					.call(
 							new Prompt(prompt,
 									VertexAiGeminiChatOptions.builder()

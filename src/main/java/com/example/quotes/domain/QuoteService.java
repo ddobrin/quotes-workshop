@@ -47,8 +47,8 @@ public class QuoteService {
   
   @Transactional
   public void randomQuote2(){
-     GenerateQuote.randomQuote2();
-     return;   
+    GenerateQuote.findRandomQuote();
+       
   }
   
   @Transactional
