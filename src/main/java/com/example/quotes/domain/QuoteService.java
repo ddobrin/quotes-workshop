@@ -44,7 +44,13 @@ public class QuoteService {
   public Quote createQuote(Quote quote){
     return quoteRepository.save(quote);
   }
-
+  
+  @Transactional
+  public void randomQuote2(){
+     GenerateQuote.randomQuote2();
+     return;   
+  }
+  
   @Transactional
   public Quote updateQuote(Quote quote){ return quoteRepository.save(quote); }
 

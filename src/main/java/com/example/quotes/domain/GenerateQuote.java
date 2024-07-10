@@ -13,28 +13,54 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package services.gemini;
+package com.example.quotes.domain;
+
+import java.util.Scanner;
 
 import org.springframework.ai.chat.prompt.Prompt;
 import org.springframework.ai.vertexai.gemini.VertexAiGeminiChatModel;
 import org.springframework.ai.vertexai.gemini.VertexAiGeminiChatOptions;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class QuotesTestApplication {
+public class GenerateQuote {
+	
+	public static void main(String[] args) {
+	}
+
+
+	public static void randomQuote2() {}
 	@Bean
 	ApplicationRunner applicationRunner(
 			VertexAiGeminiChatModel geminiChatModel) {
 
 		return args -> {
-			String book = "The Jungle Book";
-			// sample prompt
-			// String prompt = String.format("You are an experienced literary critic. Please write a summary of the book %s", book);
-			String prompt = String.format("You are an experienced literary critic. Please extract a famous quote from the book %s", book);
+	
+		String book = "";
+		String prompt = "";
+			long start = System.currentTimeMillis();
+			// TODO: Fill out the below line to call the Gemini chat model and print the generated quote. 
+			System.out.println();
+			System.out.println("VertexAI Gemini call took " + (System.currentTimeMillis() - start) + " ms");
+		};
+	}
+
+
+
+
+	// potential solution
+	/* public static void randomQuote2() {}
+	@Bean
+	ApplicationRunner applicationRunner(
+			VertexAiGeminiChatModel geminiChatModel) {
+
+		return args -> {
+			Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the book name: ");
+		String book = scanner.nextLine();
+		String prompt = String.format("You are an experienced literary critic. Please extract a famous quote from the book %s", book);
 
 			long start = System.currentTimeMillis();
 			System.out.println("VERTEX_AI_GEMINI: " + geminiChatModel
@@ -45,11 +71,7 @@ public class QuotesTestApplication {
 					).getResult().getOutput().getContent());
 			System.out.println("VertexAI Gemini call took " + (System.currentTimeMillis() - start) + " ms");
 		};
-	}
+	} */
 
-	public static void main(String[] args) {
-		new SpringApplicationBuilder(QuotesTestApplication.class)
-				.web(WebApplicationType.NONE)
-				.run(args);
-	}
+
 }
