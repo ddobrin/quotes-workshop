@@ -36,8 +36,8 @@ public class GenerateQuote {
 	}
 
 	//use chatClient in findRandomQuote
-	public static void findRandomQuote() {
-
+	public Quote findRandomQuote() {
+		return new Quote();
 	}
 
 
