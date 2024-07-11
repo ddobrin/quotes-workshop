@@ -3,6 +3,13 @@
 ## Originally published
 https://github.com/GoogleCloudPlatform/serverless-production-readiness-java-gcp/tree/main/services/quotes
 
+## VertexAI and Gemini settings
+Set the following environment variables to build and run the app
+```shell
+export VERTEX_AI_GEMINI_PROJECT_ID=<your project id>
+export VERTEX_AI_GEMINI_LOCATION=<region>
+export VERTEX_AI_GEMINI_MODEL=<<model id>>
+```
 # Build
 
 ### Create a Spring Boot Application

@@ -17,13 +17,16 @@ spring:
     vertex:
       ai:
         gemini:
-          project-id: ${VERTEX_AI_GEMINI_PROJECT_ID:next24-genai-app}
-          location: ${VERTEX_AI_GEMINI_LOCATION:us-central1}
-          model-id: ${VERTEX_AI_GEMINI_MODEL_ID:gemini-1.5-flash}
+          project-id: ${VERTEX_AI_GEMINI_PROJECT_ID}
+          location: ${VERTEX_AI_GEMINI_LOCATION}
+          model-id: ${VERTEX_AI_GEMINI_MODEL_ID}
           chat:
             options:
               model: gemini-1.5-flash
           transport: grpc
+        embedding:
+          project-id: ${VERTEX_AI_EMBEDDING_PROJECT_ID}
+          location: ${VERTEX_AI_EMBEDDING_LOCATION}
   threads:
     virtual:
       enabled: true
