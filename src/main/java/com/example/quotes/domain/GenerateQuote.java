@@ -23,51 +23,22 @@ import org.springframework.ai.vertexai.gemini.VertexAiGeminiChatOptions;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Service;
 
+@Service
 public class GenerateQuote {
-	
 
+	private VertexAiGeminiChatModel chatClient;
 
-	public static void findRandomQuote() {}
-	ApplicationRunner applicationRunner(
-			VertexAiGeminiChatModel geminiChatModel) {
-
-		return args -> {
-	
-		String book = "";
-		String prompt = "";
-			long start = System.currentTimeMillis();
-			// TODO: Fill out the below line to call the Gemini chat model and print the generated quote. 
-			System.out.println();
-			System.out.println("VertexAI Gemini call took " + (System.currentTimeMillis() - start) + " ms");
-		};
+	public GenerateQuote(VertexAiGeminiChatModel chatClient){
+		this.chatClient = chatClient;
 	}
 
+	//use chatClient in findRandomQuote
+	public static void findRandomQuote() {
 
-
-
-	// potential solution
-	/* public static void randomQuote2() {}
-	@Bean
-	ApplicationRunner applicationRunner(
-			VertexAiGeminiChatModel geminiChatModel) {
-
-		return args -> {
-			Scanner scanner = new Scanner(System.in);
-		System.out.print("Enter the book name: ");
-		String book = scanner.nextLine();
-		String prompt = String.format("You are an experienced literary critic. Please extract a famous quote from the book %s", book);
-
-			long start = System.currentTimeMillis();
-			return ("VERTEX_AI_GEMINI: " + geminiChatModel
-					.call(
-							new Prompt(prompt,
-									VertexAiGeminiChatOptions.builder()
-											.withTemperature(0.2f).build())
-					).getResult().getOutput().getContent());
-			System.out.println("VertexAI Gemini call took " + (System.currentTimeMillis() - start) + " ms");
-		};
-	} */
+	}
 
 
 }
