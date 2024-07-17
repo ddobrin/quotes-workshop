@@ -24,9 +24,6 @@ spring:
             options:
               model: gemini-1.5-flash
           transport: grpc
-        embedding:
-          project-id: ${VERTEX_AI_EMBEDDING_PROJECT_ID}
-          location: ${VERTEX_AI_EMBEDDING_LOCATION}
   threads:
     virtual:
       enabled: true
