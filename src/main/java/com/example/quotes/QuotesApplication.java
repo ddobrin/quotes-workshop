@@ -15,6 +15,8 @@
  */
 package com.example.quotes;
 
+import com.vaadin.flow.component.page.AppShellConfigurator;
+import com.vaadin.flow.theme.Theme;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -22,7 +24,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Application to manage book quotes
  */
 @SpringBootApplication
-public class QuotesApplication {
+@Theme("quotes")
+public class QuotesApplication implements AppShellConfigurator {
 
   public static void main(String[] args) {
     Runtime r = Runtime.getRuntime();

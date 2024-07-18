@@ -46,7 +46,7 @@ Java HotSpot(TM) 64-Bit Server VM Oracle GraalVM 21+35.1 (build 21+35-jvmci-23.1
 
 ### Validate that the starter app is good to go
 ```
-./mvnw package spring-boot:run
+./mvnw package -Pproduction spring-boot:run
 ```
 
 From a terminal window, test the app
@@ -59,9 +59,9 @@ Hello from your local environment!
 
 ### Build a JIT and Native Java application image
 ```
-./mvnw package -DskipTests 
+./mvnw package -DskipTests -Pproduction
 
-./mvnw native:compile -Pnative -DskipTests
+./mvnw native:compile -Pnative -DskipTests -Pproduction
 ```
 
 ### Start your app with AOT enabled
@@ -81,9 +81,10 @@ docker build -f ./containerize/Dockerfile-custom -t quotes-custom .
 ```
 ### Build a JIT and Native Java Docker Image with Buildpacks
 ```
-./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=quotes
+./mvnw spring-boot:build-image -Dspring-boot.build-image.imageName=quotes -Pproduction
 
-./mvnw spring-boot:build-image  -DskipTests -Pnative -Dspring-boot.build-image.imageName=quotes-native
+
+./mvnw spring-boot:build-image  -DskipTests -Pnative -Dspring-boot.build-image.imageName=quotes-native -Pproduction
 ```
 
 ### Test the locally built images on the local machine
