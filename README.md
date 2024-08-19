@@ -55,6 +55,10 @@ curl localhost:8083/start
 
 # Output
 Hello from your local environment!
+
+# get quotes from the app
+curl localhost:8083/quotes
+curl localhost:8083/random-quote
 ```
 
 ### Build a JIT and Native Java application image
@@ -153,17 +157,20 @@ Start the containerized app locally:
 curl localhost:8080:/start
 
 # get quotes from the app
-curl localhost:8080/quotes
-curl localhost:8080/random-quote
+curl localhost:8083/quotes
+curl localhost:8083/random-quote
 
 # add a new quote to the repository
-curl --location 'http://localhost:8080/quotes' \
+curl --location 'http://localhost:8083/quotes' \
 --header 'Content-Type: application/json' \
 --data '{
     "author" : "Isabel Allende",
     "quote" : "The longer I live, the more uninformed I feel. Only the young have an explanation for everything.",
     "book" : "City of the Beasts"
 }'
+
+# Validate that the quote has been added
+curl localhost:8083/quotes
 ```
 
 Test the application in Cloud Run
