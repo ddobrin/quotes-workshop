@@ -82,6 +82,9 @@ public class QuoteController {
 
             if (quotes.isEmpty())
                 return new ResponseEntity<List<Quote>>(HttpStatus.NO_CONTENT);
+
+            for(int i = 0; i < quotes.size(); i++)
+                System.out.println(quotes.get(i).getQuote());
                 
             return new ResponseEntity<List<Quote>>(quotes, HttpStatus.OK);
         } catch (Exception e) {
