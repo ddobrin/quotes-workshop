@@ -30,3 +30,6 @@ target/
 src/main/frontend/generated/*
 node_modules/
 bundles/
+
+settings.json
+
