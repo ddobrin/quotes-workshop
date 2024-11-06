@@ -27,9 +27,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional //(readOnly = true)
 public class QuoteService {
   private final QuoteRepository quoteRepository;
+  private final GenerateQuote generateQuote;
 
-  public QuoteService(QuoteRepository quoteRepository) {
+  public QuoteService(QuoteRepository quoteRepository, GenerateQuote generateQuote) {
     this.quoteRepository = quoteRepository;
+    this.generateQuote = generateQuote;
   }
 
   public Quote findRandomQuote() {
@@ -47,8 +49,7 @@ public class QuoteService {
   
   @Transactional
   public void randomQuote2(){
-    GenerateQuote.findRandomQuote();
-       
+    quoteRepository.findRandomQuote();
   }
   
   @Transactional
