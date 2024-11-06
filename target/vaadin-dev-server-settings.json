@@ -1,0 +1,17 @@
+{
+  "frontendFolder": "/Users/daniellan/quotes-workshop/src/main/frontend",
+  "themeFolder": "themes",
+  "themeResourceFolder": "/Users/daniellan/quotes-workshop/src/main/frontend/generated/jar-resources",
+  "staticOutput": "/Users/daniellan/quotes-workshop/target/classes/META-INF/VAADIN/webapp/VAADIN/static",
+  "generatedFolder": "generated",
+  "statsOutput": "/Users/daniellan/quotes-workshop/target/classes/META-INF/VAADIN/config",
+  "frontendBundleOutput": "/Users/daniellan/quotes-workshop/target/classes/META-INF/VAADIN/webapp",
+  "devBundleOutput": "/Users/daniellan/quotes-workshop/target/dev-bundle/webapp",
+  "devBundleStatsOutput": "/Users/daniellan/quotes-workshop/target/dev-bundle/config",
+  "jarResourcesFolder": "/Users/daniellan/quotes-workshop/src/main/frontend/generated/jar-resources",
+  "themeName": "quotes",
+  "clientServiceWorkerSource": "/Users/daniellan/quotes-workshop/target/sw.ts",
+  "pwaEnabled": false,
+  "offlineEnabled": false,
+  "offlinePath": "'offline.html'"
+}
